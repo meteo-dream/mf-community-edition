@@ -22,6 +22,10 @@ Free, non-commercial fan project by [Meteo Dream](https://github.com/meteo-dream
 - Keyboard and gamepad support
 - Windows and Linux builds
 
+## Interim builds
+
+Windows and Linux interim builds are compiled by the GitHub Actions workflow on each commit and you can download them [here](https://nx.wtf/s/2GqcQ). These are not stable releases.
+
 ## Running from source
 
 This project targets a [patched build of **Godot 4.7.1-rc2**](https://nx.wtf/s/aVtZ?path=Software%2FGodot-TE) with rendering fixes. You will run into problems if you use other Godot versions, including official builds. You can [compile that fork yourself](https://github.com/Thunder-Engine-Dev/godot-te/tree/4.7) if needed.
