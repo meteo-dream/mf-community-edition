@@ -39,7 +39,7 @@ If you already cloned without submodules:
 git submodule update --init --recursive
 ```
 
-Open `project.godot` in Godot, wait for the import to finish, then reload the project (Project -> Reload Current Project). The reload is there so GDExtensions actually load.
+Open `project.godot` in Godot, wait for the import to finish, then reload the project (Project -> Reload Current Project). Reload is needed for the GDExtensions to load properly.
 
 Saves, settings and logs go to `MeteoDream/Mario Forever Community Edition`. Where that folder sits depends on the OS; see [Godot docs](https://docs.godotengine.org/en/4.7/tutorials/io/data_paths.html#accessing-persistent-user-data-user).
 Change the path in Project Settings if needed.
