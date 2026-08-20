@@ -18,7 +18,6 @@
 [ext_resource type="Texture2D" uid="uid://c4m5sukol1d28" path="res://engine/tilesets/underwater/gfx/UWcoral.png" id="18_1rtxq"]
 [ext_resource type="Material" uid="uid://ctvm6eweeo2si" path="res://materials/underwater_bg_wave.tres" id="18_yedrf"]
 [ext_resource type="Script" uid="uid://cwexfhhlx0y0h" path="res://shaders/quality_shader_set.gd" id="19_he6wb"]
-[ext_resource type="Texture2D" uid="uid://d0v12838slwnk" path="res://engine/tilesets/underwater/gfx/UWcoral2.png" id="20_cfsmh"]
 [ext_resource type="Texture2D" uid="uid://c2uhsw3sxuals" path="res://engine/tilesets/underwater/gfx/underwater_green_block.png" id="21_0x7co"]
 [ext_resource type="Texture2D" uid="uid://cat3i3pljsllh" path="res://engine/tilesets/underwater/gfx/UWrocks.png" id="21_dj7ld"]
 [ext_resource type="PackedScene" uid="uid://b8kgbn8f7lvf0" path="res://engine/objects/items/coin/coin.tscn" id="21_hcrai"]
@@ -77,7 +76,7 @@ metadata/_snap_enabled = true
 gradient = SubResource("Gradient_mjv5g")
 width = 400
 
-[sub_resource type="Resource" id="Resource_b8r35"]
+[sub_resource type="Resource" id="Resource_hs18t"]
 resource_local_to_scene = true
 script = ExtResource("23_fkx3h")
 creation_nodepack = ExtResource("26_dncai")
@@ -280,25 +279,13 @@ navigation_enabled = false
 
 [node name="UWcoral" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=119162246]
 modulate = Color(1, 1, 1, 0.215686)
+texture_repeat = 2
 material = ExtResource("18_yedrf")
 position = Vector2(2624, 1024)
 texture = ExtResource("18_1rtxq")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 9800, 352)
-script = ExtResource("19_he6wb")
-medium = true
-metadata/_edit_lock_ = true
-
-[node name="UWcoral2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=265038932]
-modulate = Color(1, 1, 1, 0.435294)
-texture_repeat = 2
-material = ExtResource("18_yedrf")
-position = Vector2(0, 1120)
-texture = ExtResource("20_cfsmh")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 9800, 256)
 script = ExtResource("19_he6wb")
 medium = true
 metadata/_edit_lock_ = true
@@ -609,7 +596,7 @@ position = Vector2(8879, 1212)
 
 [node name="QuestionBlockLife" parent="." unique_id=1144270685 instance=ExtResource("25_sea3u")]
 position = Vector2(7408, 112)
-result = SubResource("Resource_b8r35")
+result = SubResource("Resource_hs18t")
 
 [node name="CheepYellow" parent="." unique_id=287696689 instance=ExtResource("28_b32cb")]
 position = Vector2(7200, 153)
