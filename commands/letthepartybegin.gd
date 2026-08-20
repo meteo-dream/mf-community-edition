@@ -7,6 +7,7 @@ const SCENE_PATHS: Array[StringName] = [
 	&"_u/hidden/extralevel_2",
 	&"_u/hidden/extralevel_3",
 	&"MisiekMomento",
+	&"human_lava_run",
 ]
 
 static func register() -> Command:
