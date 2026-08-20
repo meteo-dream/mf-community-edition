@@ -71,6 +71,7 @@ Don't edit `engine/` in place; it's a submodule, and those changes vanish when i
 
 - Discord: [https://discord.gg/VwgV6GmwXv](https://discord.gg/VwgV6GmwXv)
 - Forum (English): [https://marioforever.space](https://marioforever.space)
+- Forum (Chinese): [https://marioforever.net](https://marioforever.net)
 - Download MF games: [https://download.marioforever.net/mf-games.html](https://download.marioforever.net/mf-games.html)
 - Thunder Engine docs: [engine/README.md](engine/README.md)
 
