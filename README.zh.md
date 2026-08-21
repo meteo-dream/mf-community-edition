@@ -109,7 +109,7 @@ git submodule update --init --recursive
 
 [godot-img]: https://img.shields.io/badge/Godot-4.7-478cbf?logo=godot-engine&logoColor=white
 [godot-link]: https://godotengine.org
-[license-img]: https://img.shields.io/badge/license-BSD--3--Clause-green.svg
+[license-img]: https://img.shields.io/badge/license-Non--Commercial-orange.svg
 [discord-img-]: https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white
 [discord-img]: https://img.shields.io/discord/818109948490809344?logo=discord&logoColor=white&color=5865F2
 [discord-link]: https://discord.gg/VwgV6GmwXv
