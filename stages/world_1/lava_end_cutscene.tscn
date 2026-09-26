@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://b60w6hvmspdar" path="res://stages/world_1/objects/1_4_castle_brick.gd" id="11_sr0k1"]
 [ext_resource type="PackedScene" uid="uid://72feht11cer2" path="res://engine/components/audio_area/audio_area_cave.tscn" id="12_cyq2t"]
 [ext_resource type="Script" uid="uid://y7kp0intfnf5" path="res://objects/chorniy_mario/chorniy_cutscene_spawner.gd" id="13_hkaqm"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="15_gmoyt"]
 
 [sub_resource type="Gradient" id="Gradient_7mqsr"]
 colors = PackedColorArray(0.854902, 0, 0.0784314, 1, 0, 0, 0, 1)
@@ -37,6 +38,20 @@ fill_to = Vector2(0, 0)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_victr"]
 normal = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_p2jum"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_vxb2k"]
+gradient = SubResource("Gradient_p2jum")
+width = 112
+
+[sub_resource type="Gradient" id="Gradient_vq2xw"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nynyf"]
+gradient = SubResource("Gradient_vq2xw")
+width = 112
 
 [node name="LavaEndCutscene" type="Node2D" unique_id=1806514129]
 script = ExtResource("1_qwxd0")
@@ -303,3 +318,25 @@ shape = SubResource("WorldBoundaryShape2D_victr")
 
 [node name="ChorniyCutsceneSpawner" type="Node" parent="." unique_id=825737836]
 script = ExtResource("13_hkaqm")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1053933148]
+position = Vector2(-128, 0)
+script = ExtResource("15_gmoyt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=838714807]
+z_index = -20
+position = Vector2(12276, 0.0389367)
+rotation = 1.5708
+scale = Vector2(1, 12279)
+texture = SubResource("GradientTexture1D_vxb2k")
+centered = false
+script = ExtResource("15_gmoyt")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=2100708165]
+z_index = -20
+position = Vector2(-16, 0)
+rotation = -1.5708
+scale = Vector2(1, 13588.6)
+texture = SubResource("GradientTexture1D_nynyf")
+centered = false
+script = ExtResource("15_gmoyt")

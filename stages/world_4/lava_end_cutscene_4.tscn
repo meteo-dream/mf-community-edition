@@ -13,9 +13,24 @@
 [ext_resource type="Texture2D" uid="uid://b4bidw2kq5wd" path="res://tilesets/castle/gfx/gray_platform_bg.png" id="11_ag1xk"]
 [ext_resource type="PackedScene" uid="uid://72feht11cer2" path="res://engine/components/audio_area/audio_area_cave.tscn" id="12_bmccx"]
 [ext_resource type="Script" uid="uid://y7kp0intfnf5" path="res://objects/chorniy_mario/chorniy_cutscene_spawner.gd" id="13_v7d64"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="14_l5ixr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_victr"]
 normal = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_r6uws"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_c5y32"]
+gradient = SubResource("Gradient_r6uws")
+width = 112
+
+[sub_resource type="Gradient" id="Gradient_8bxr7"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u14iy"]
+gradient = SubResource("Gradient_8bxr7")
+width = 112
 
 [node name="LavaEndCutscene" type="Node2D" unique_id=1147014169]
 script = ExtResource("1_g8x5u")
@@ -265,3 +280,25 @@ shape = SubResource("WorldBoundaryShape2D_victr")
 
 [node name="ChorniyCutsceneSpawner" type="Node" parent="." unique_id=1979723120]
 script = ExtResource("13_v7d64")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=114754784]
+position = Vector2(-128, 0)
+script = ExtResource("14_l5ixr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=543207557]
+z_index = -20
+position = Vector2(12276, 0.0389367)
+rotation = 1.5708
+scale = Vector2(1, 12279)
+texture = SubResource("GradientTexture1D_c5y32")
+centered = false
+script = ExtResource("14_l5ixr")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=1953270912]
+z_index = -20
+position = Vector2(-16, 0)
+rotation = -1.5708
+scale = Vector2(1, 13588.6)
+texture = SubResource("GradientTexture1D_u14iy")
+centered = false
+script = ExtResource("14_l5ixr")

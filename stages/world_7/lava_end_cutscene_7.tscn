@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c7madb3fe540" path="res://tilesets/castle/gfx/bowser_portrait.png" id="13_qoefs"]
 [ext_resource type="Texture2D" uid="uid://bcb0p63rnf2gm" path="res://tilesets/castle/gfx/bowser_portrait_anim.png" id="14_2d5yl"]
 [ext_resource type="Script" uid="uid://y7kp0intfnf5" path="res://objects/chorniy_mario/chorniy_cutscene_spawner.gd" id="15_73ofd"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="16_y3jbr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_victr"]
 normal = Vector2(0, 1)
@@ -103,6 +104,20 @@ animations = [{
 "name": &"default",
 "speed": 33.0
 }]
+
+[sub_resource type="Gradient" id="Gradient_pmpoy"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j1bfg"]
+gradient = SubResource("Gradient_pmpoy")
+width = 112
+
+[sub_resource type="Gradient" id="Gradient_rft62"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6jyo5"]
+gradient = SubResource("Gradient_rft62")
+width = 112
 
 [node name="LavaEndCutscene" type="Node2D" unique_id=1776131027]
 script = ExtResource("1_7kgk0")
@@ -368,3 +383,25 @@ centered = false
 
 [node name="ChorniyCutsceneSpawner" type="Node" parent="." unique_id=1660627251]
 script = ExtResource("15_73ofd")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1545583133]
+position = Vector2(-128, 0)
+script = ExtResource("16_y3jbr")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=115962092]
+z_index = -20
+position = Vector2(12276, 0.0389367)
+rotation = 1.5708
+scale = Vector2(1, 12279)
+texture = SubResource("GradientTexture1D_j1bfg")
+centered = false
+script = ExtResource("16_y3jbr")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=2107343284]
+z_index = -20
+position = Vector2(-16, 0)
+rotation = -1.5708
+scale = Vector2(1, 13588.6)
+texture = SubResource("GradientTexture1D_6jyo5")
+centered = false
+script = ExtResource("16_y3jbr")

@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://72feht11cer2" path="res://engine/components/audio_area/audio_area_cave.tscn" id="12_t7ajq"]
 [ext_resource type="PackedScene" uid="uid://cn8grkane7ypq" path="res://stages/extra/human_lab_2/objects/1-4_red_castle_brick_small.tscn" id="12_ytesc"]
 [ext_resource type="Script" uid="uid://y7kp0intfnf5" path="res://objects/chorniy_mario/chorniy_cutscene_spawner.gd" id="13_yd5oi"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="15_ltlqc"]
 
 [sub_resource type="Gradient" id="Gradient_iuig2"]
 colors = PackedColorArray(0, 0, 0, 1, 1, 0.85098, 0.188235, 1)
@@ -44,6 +45,20 @@ fill_to = Vector2(0, 1)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_victr"]
 normal = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_le50e"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_xmxmx"]
+gradient = SubResource("Gradient_le50e")
+width = 112
+
+[sub_resource type="Gradient" id="Gradient_ytesc"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_6f6pr"]
+gradient = SubResource("Gradient_ytesc")
+width = 112
 
 [node name="LavaEndCutscene" type="Node2D" unique_id=1227918329]
 script = ExtResource("1_kj87j")
@@ -319,3 +334,25 @@ shape = SubResource("WorldBoundaryShape2D_victr")
 
 [node name="ChorniyCutsceneSpawner" type="Node" parent="." unique_id=2143297023]
 script = ExtResource("13_yd5oi")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=2126316771]
+position = Vector2(-128, 0)
+script = ExtResource("15_ltlqc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=1717727207]
+z_index = -20
+position = Vector2(12276, 0.0389367)
+rotation = 1.5708
+scale = Vector2(1, 12279)
+texture = SubResource("GradientTexture1D_xmxmx")
+centered = false
+script = ExtResource("15_ltlqc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=676497859]
+z_index = -20
+position = Vector2(-16, 0)
+rotation = -1.5708
+scale = Vector2(1, 13588.6)
+texture = SubResource("GradientTexture1D_6f6pr")
+centered = false
+script = ExtResource("15_ltlqc")
