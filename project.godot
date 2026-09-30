@@ -87,7 +87,7 @@ thunder_settings/tweaks/amiga_ntsc_pitch=false
 thunder_settings/tweaks/save_icon=false
 thunder_settings/tweaks/original_snes_pitch=false
 thunder_settings/tweaks/improved_extra_levels=true
-thunder_settings/verbose_shader_optimizing=true
+thunder_settings/verbose_shader_optimizing=false
 thunder_settings/tweaks/show_warning_on_improved_levels=true
 
 [audio]

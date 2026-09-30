@@ -389,19 +389,18 @@ position = Vector2(-128, 0)
 script = ExtResource("16_y3jbr")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=115962092]
-z_index = -20
-position = Vector2(12276, 0.0389367)
+z_index = -15
+position = Vector2(800, 0.039)
 rotation = 1.5708
-scale = Vector2(1, 12279)
+scale = Vector2(1, 800)
 texture = SubResource("GradientTexture1D_j1bfg")
 centered = false
 script = ExtResource("16_y3jbr")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=2107343284]
 z_index = -20
-position = Vector2(-16, 0)
 rotation = -1.5708
-scale = Vector2(1, 13588.6)
+scale = Vector2(1, 800)
 texture = SubResource("GradientTexture1D_6jyo5")
 centered = false
 script = ExtResource("16_y3jbr")

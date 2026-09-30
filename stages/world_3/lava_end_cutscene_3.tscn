@@ -16,9 +16,24 @@
 [ext_resource type="Script" uid="uid://y7kp0intfnf5" path="res://objects/chorniy_mario/chorniy_cutscene_spawner.gd" id="13_obxbc"]
 [ext_resource type="Script" uid="uid://b48uvvaw87u37" path="res://stages/extra/expert_mode/scripts/world_3-1_fixer.gd" id="14_qbfit"]
 [ext_resource type="Texture2D" uid="uid://cnkotj5u0xogf" path="res://stages/extra/click_bonus_game/textures/congratulations.png" id="16_vq14o"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="17_r8lje"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_victr"]
 normal = Vector2(0, 1)
+
+[sub_resource type="Gradient" id="Gradient_pmpoy"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nnt34"]
+gradient = SubResource("Gradient_pmpoy")
+width = 112
+
+[sub_resource type="Gradient" id="Gradient_rft62"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fo77a"]
+gradient = SubResource("Gradient_rft62")
+width = 112
 
 [node name="LavaEndCutscene" type="Node2D" unique_id=1488964566]
 script = ExtResource("1_5n00a")
@@ -279,5 +294,26 @@ script = ExtResource("14_qbfit")
 modulate = Color(1, 1, 1, 0)
 position = Vector2(320, 240)
 texture = ExtResource("16_vq14o")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=400938146]
+position = Vector2(-80, 0)
+script = ExtResource("17_r8lje")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=979676225]
+z_index = -15
+position = Vector2(800, 0.039)
+rotation = 1.5708
+scale = Vector2(1, 800)
+texture = SubResource("GradientTexture1D_nnt34")
+centered = false
+script = ExtResource("17_r8lje")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=1235767141]
+z_index = -20
+rotation = -1.5708
+scale = Vector2(1, 800)
+texture = SubResource("GradientTexture1D_fo77a")
+centered = false
+script = ExtResource("17_r8lje")
 
 [connection signal="stage_ready" from="." to="SecretUnlocker" method="unlock_secret"]

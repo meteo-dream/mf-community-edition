@@ -320,23 +320,22 @@ shape = SubResource("WorldBoundaryShape2D_victr")
 script = ExtResource("13_hkaqm")
 
 [node name="Node2D2" type="Node2D" parent="." unique_id=1053933148]
-position = Vector2(-128, 0)
+position = Vector2(-80, 0)
 script = ExtResource("15_gmoyt")
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=838714807]
 z_index = -20
-position = Vector2(12276, 0.0389367)
+position = Vector2(800, 0)
 rotation = 1.5708
-scale = Vector2(1, 12279)
+scale = Vector2(1, 800)
 texture = SubResource("GradientTexture1D_vxb2k")
 centered = false
 script = ExtResource("15_gmoyt")
 
 [node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=2100708165]
 z_index = -20
-position = Vector2(-16, 0)
 rotation = -1.5708
-scale = Vector2(1, 13588.6)
+scale = Vector2(1, 800)
 texture = SubResource("GradientTexture1D_nynyf")
 centered = false
 script = ExtResource("15_gmoyt")

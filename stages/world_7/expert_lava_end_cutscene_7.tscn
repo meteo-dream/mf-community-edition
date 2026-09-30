@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://c7madb3fe540" path="res://tilesets/castle/gfx/bowser_portrait.png" id="13_nyeoh"]
 [ext_resource type="Texture2D" uid="uid://bcb0p63rnf2gm" path="res://tilesets/castle/gfx/bowser_portrait_anim.png" id="14_ceqv3"]
 [ext_resource type="Script" uid="uid://y7kp0intfnf5" path="res://objects/chorniy_mario/chorniy_cutscene_spawner.gd" id="15_2cjp7"]
+[ext_resource type="Script" uid="uid://0h3x5dwndovw" path="res://engine/scripts/nodes/effects/quality_visible.gd" id="16_bnhev"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_victr"]
 normal = Vector2(0, 1)
@@ -103,6 +104,20 @@ animations = [{
 "name": &"default",
 "speed": 33.0
 }]
+
+[sub_resource type="Gradient" id="Gradient_pmpoy"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_u60t3"]
+gradient = SubResource("Gradient_pmpoy")
+width = 112
+
+[sub_resource type="Gradient" id="Gradient_rft62"]
+colors = PackedColorArray(0, 0, 0, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fheg5"]
+gradient = SubResource("Gradient_rft62")
+width = 112
 
 [node name="LavaEndCutscene" type="Node2D" unique_id=2110956088]
 script = ExtResource("1_016gs")
@@ -368,3 +383,24 @@ centered = false
 
 [node name="ChorniyCutsceneSpawner" type="Node" parent="." unique_id=976717903]
 script = ExtResource("15_2cjp7")
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=1580865124]
+position = Vector2(-128, 0)
+script = ExtResource("16_bnhev")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D2" unique_id=549337203]
+z_index = -15
+position = Vector2(800, 0.039)
+rotation = 1.5708
+scale = Vector2(1, 800)
+texture = SubResource("GradientTexture1D_u60t3")
+centered = false
+script = ExtResource("16_bnhev")
+
+[node name="Sprite2D3" type="Sprite2D" parent="Node2D2" unique_id=1479260259]
+z_index = -20
+rotation = -1.5708
+scale = Vector2(1, 800)
+texture = SubResource("GradientTexture1D_fheg5")
+centered = false
+script = ExtResource("16_bnhev")
