@@ -4,7 +4,7 @@ on: workflow_dispatch
 # NOTE: If your `project.godot` is at the repository root, set `PROJECT_PATH` below to ".".
 
 env:
-  GODOT_VERSION: 4.7.1.rc2
+  GODOT_VERSION: 4.7.3.rc1
   EXPORT_NAME: Mario Forever Community Edition
   PROJECT_PATH: .
   UPLOAD_FOLDER: MFCE-Builds/Release
@@ -14,7 +14,7 @@ jobs:
     name: Windows x86-64 Release Export
     runs-on: ubuntu-24.04 # Using 24.04 due to libgdmpt extension (for audio playback) failing on 22.04
     container:
-      image: jue13/godot-ci:4.7.1.rc2
+      image: jue13/godot-ci:4.7.3.rc1
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -73,7 +73,7 @@ jobs:
     name: Linux x86-64 Release Export
     runs-on: ubuntu-24.04 # Using 24.04 due to libgdmpt extension (for audio playback) failing on 22.04
     container:
-      image: jue13/godot-ci:4.7.1.rc2
+      image: jue13/godot-ci:4.7.3.rc1
     steps:
       - name: Checkout
         uses: actions/checkout@v7
