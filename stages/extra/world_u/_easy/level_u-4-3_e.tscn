@@ -202,7 +202,7 @@ script = ExtResource("1_at1jr")
 time = 300
 completion_music = ExtResource("2_txgab")
 jump_to_scene = "uid://c0ym18ca0llr7"
-game_over_continue_scene_override = "res://stages/extra/world_u/_hard/level_u-4_e.tscn"
+game_over_continue_scene_override = "uid://cm3jxvq0eanra"
 metadata/_custom_type_script = "uid://dh7ob1sbo8lx7"
 metadata/_edit_vertical_guides_ = [2000.0]
 
