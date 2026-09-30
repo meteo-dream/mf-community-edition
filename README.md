@@ -30,7 +30,7 @@ Windows and Linux interim builds are compiled by the GitHub Actions workflow on 
 
 ## Running from source
 
-This project targets a [patched build of **Godot 4.7.1-rc2**](https://nx.wtf/s/aVtZ?path=Software%2FGodot-TE) with rendering fixes. You will run into problems if you use other Godot versions, including official builds. You can [compile that fork yourself](https://github.com/Thunder-Engine-Dev/godot-te/tree/4.7) if needed.
+This project targets a [patched build of **Godot 4.7.3-rc1**](https://nx.wtf/s/aVtZ?path=Software%2FGodot-TE) with rendering fixes. You will run into problems if you use other Godot versions, including official builds. You can [compile that fork yourself](https://github.com/Thunder-Engine-Dev/godot-te/tree/4.7) if needed.
 
 Thunder Engine is included as a git submodule. Clone recursively:
 
