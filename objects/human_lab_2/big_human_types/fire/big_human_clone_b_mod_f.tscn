@@ -272,7 +272,6 @@ autostart = true
 
 [node name="ShapeCast2D" type="ShapeCast2D" parent="." unique_id=70396654]
 visible = false
-position = Vector2(0, -1)
 enabled = false
 shape = SubResource("RectangleShape2D_gtn54")
 target_position = Vector2(0, 0)
